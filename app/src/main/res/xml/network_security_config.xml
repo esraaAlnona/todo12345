@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <debug-overrides>
+        <trust-anchors>
+            <!-- Trust user added CAs while debuggable only -->
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">services.aimict.org</domain>
+    </domain-config>
+
+    <!--<domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">tagportal.tagorg.com:85/TAGOService.svc/</domain>
+    </domain-config>-->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">tag-publication.com</domain>
+    </domain-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">tagapps.tag.global</domain>
+        <trust-anchors>
+            <certificates src="@raw/tag_global"/>
+        </trust-anchors>
+    </domain-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">tagportal.tagorg.com</domain>
+    </domain-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">https://hr-info.tag.global</domain>
+    </domain-config>
+    <domain-config>
+        <domain includeSubdomains="true">media.tagorg.com</domain>
+        <trust-anchors>
+            <certificates src="@raw/star_tagorg_com"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
+
+
