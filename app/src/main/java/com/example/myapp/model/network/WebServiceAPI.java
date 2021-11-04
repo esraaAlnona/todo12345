@@ -14,16 +14,15 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
-public interface PlaceHolderApi {
+public interface WebServiceAPI {
 
     @GET("todo/{tagPortalUserId}")
     Call<List<ToDoModel>> getList(@Path("tagPortalUserId") int tagPortalId);
 
-    @FormUrlEncoded
-    @POST("todo/{tagPortalUserId}")
+
+    @POST("todo/")
     Call<ToDoModel> createList(
-            @Field("taskName") String taskName,
-            @Field("desc") String desc
+            @Body ToDoModel toDoModel
     );
 
     @DELETE("todo/{tagPortalUserId}")
@@ -31,7 +30,7 @@ public interface PlaceHolderApi {
 
 
     @PUT("todo/{tagPortalUserId}")
-    Call<ToDoModel> putListy(@Body String name, @Body String des );
+    Call<ToDoModel> putListy(@Body ToDoModel toDoModel);
 
 
 }

@@ -14,6 +14,10 @@ public class ToDoModel {
     private int mStatus;
 
 
+    public ToDoModel(){
+
+    }
+
     public ToDoModel(String taskName, String desc, int status, int userId){
 
         mTaskName = taskName;
@@ -23,20 +27,35 @@ public class ToDoModel {
 
     }
 
+    public int getmUserId() {
+        return mUserId;
+    }
+
+    public void setmUserId(int mUserId) {
+        this.mUserId = mUserId;
+    }
 
     public String getmTaskName() {
         return mTaskName;
+    }
+
+    public void setmTaskName(String mTaskName) {
+        this.mTaskName = mTaskName;
     }
 
     public String getmDesc() {
         return mDesc;
     }
 
+    public void setmDesc(String mDesc) {
+        this.mDesc = mDesc;
+    }
+
     public int getmStatus() {
         return mStatus;
     }
 
-    public int getmUserId() {
-        return mUserId;
+    public void setmStatus(int mStatus) {
+        this.mStatus = mStatus;
     }
 }

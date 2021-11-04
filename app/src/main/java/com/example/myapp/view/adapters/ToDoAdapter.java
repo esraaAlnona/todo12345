@@ -11,18 +11,23 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapp.R;
+import com.example.myapp.model.ToDoRepository;
 import com.example.myapp.model.models.ToDoModel;
+import com.example.myapp.view.ui.CreateToDoActivity;
 
 import java.util.ArrayList;
 
 public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoAdapterViewHolder> {
     private ArrayList<ToDoModel> mTodo;
     private Context context;
+    private ToDoModel mtoDoModel;
+    ToDoRepository mtoDoRepository;
 
     public ToDoAdapter(ArrayList<ToDoModel> tasksList, Context context){
         mTodo = tasksList;
         this.context = context;
     }
+
 
     @NonNull
     @Override

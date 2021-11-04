@@ -32,9 +32,9 @@
     </domain-config>
     <domain-config>
         <domain includeSubdomains="true">media.tagorg.com</domain>
-        <trust-anchors>
+        <!--<trust-anchors>
             <certificates src="@raw/star_tagorg_com"/>
-        </trust-anchors>
+        </trust-anchors>-->
     </domain-config>
 </network-security-config>
 
